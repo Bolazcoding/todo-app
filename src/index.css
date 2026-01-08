@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Josefin Sans", sans-serif;
+  /* ========== LIGHT THEME ========== */
+  --color-bg-main: hsl(0, 0%, 98%); /* Gray 50 */
+  --color-bg-card: hsl(0, 0%, 98%); /* Gray 50 */
+
+  --color-text-primary: hsl(235, 19%, 35%); /* Navy 850 */
+  --color-text-secondary: hsl(236, 9%, 61%); /* Gray 600 */
+
+  --color-border: hsl(233, 11%, 84%); /* Gray 300 */
+  --color-divider: hsl(234, 39%, 85%); /* Purple 300 */
+  --color-primary-check-gradient: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+
+@theme {
+  /* ========== PRIMARY ========== */
+  --color-primary-blue-500: hsl(220, 98%, 61%);
+  --color-primary-check-gradient: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  /* ========== LIGHT THEME ========== */
+  --color-bg-main: hsl(0, 0%, 98%); /* Gray 50 */
+  --color-bg-card: hsl(0, 0%, 98%); /* Gray 50 */
+
+  --color-text-primary: hsl(235, 19%, 35%); /* Navy 850 */
+  --color-text-secondary: hsl(236, 9%, 61%); /* Gray 600 */
+
+  --color-border: hsl(233, 11%, 84%); /* Gray 300 */
+  --color-divider: hsl(234, 39%, 85%); /* Purple 300 */
+}
+
+/* ========== DARK THEME ========== */
+.dark {
+  --color-bg-main: hsl(235, 21%, 11%); /* Navy 950 */
+  --color-bg-card: hsl(235, 24%, 19%); /* Navy 900 */
+
+  --color-text-primary: hsl(234, 39%, 85%); /* Purple 300 */
+  --color-text-secondary: hsl(236, 9%, 61%); /* Gray 600 */
+
+  --color-border: hsl(237, 14%, 26%); /* Purple 800 */
+  --color-divider: hsl(233, 14%, 35%); /* Purple 700 */
+
+  --color-hover: hsl(236, 33%, 92%); /* Purple 100 */
+  --color-text-muted: hsl(235, 16%, 43%); /* Purple 600 */
+}
+
+@layer components {
+  .check-btn {
+    @apply w-[1.2rem] h-[1.2rem] border border-border rounded-full p-1;
+  }
+  .checked_btn {
+    @apply p-0.5 bg-[url('../src\assets\icon-check.svg'),var(--color-primary-check-gradient)] bg-cover;
+  }
+}

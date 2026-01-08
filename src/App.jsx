@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg-main bg-[url(/src\assets\bg-desktop-light.jpg)] h-45">
+      <div className="bg-bg-main bg-(image:--bg-image-light) h-45">
         <Main>
           <Header />
           <TodoForm onAddItems={handleAddItems} />

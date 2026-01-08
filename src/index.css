@@ -35,6 +35,11 @@
 
   --color-border: hsl(233, 11%, 84%); /* Gray 300 */
   --color-divider: hsl(234, 39%, 85%); /* Purple 300 */
+
+  --bg-image-light: url("src/assets/bg-desktop-light.jpg");
+
+  --img-check: "src/assets/icon-check.svg";
+  --img-cross: "src/assets/icon-cross.svg";
 }
 
 /* ========== DARK THEME ========== */
@@ -57,6 +62,6 @@
     @apply w-[1.2rem] h-[1.2rem] border border-border rounded-full p-1;
   }
   .checked_btn {
-    @apply p-0.5 bg-[url('../src\assets\icon-check.svg'),var(--color-primary-check-gradient)] bg-cover;
+    @apply p-0.5 bg-[url('src/assets/icon-check.svg'),var(--color-primary-check-gradient)] bg-cover;
   }
 }

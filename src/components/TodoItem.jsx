@@ -1,5 +1,3 @@
-import cross_icon from "../assets/icon-cross.svg";
-
 function TodoItem({ item, onDeleteItems, onToggleItems }) {
   return (
     <li className="bg-bg-card flex items-center justify-between px-4 py-2.5 rounded">
@@ -18,7 +16,17 @@ function TodoItem({ item, onDeleteItems, onToggleItems }) {
         </span>
       </div>
       <button onClick={() => onDeleteItems(item.id)}>
-        <img src={cross_icon} alt="cross_icon" className="w-3.5" />
+        <svg
+          className="w-3.5 h-3.5"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 18 18"
+        >
+          <path
+            fill="#494C6B"
+            fill-rule="evenodd"
+            d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
+          />
+        </svg>
       </button>
     </li>
   );

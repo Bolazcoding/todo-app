@@ -1,4 +1,4 @@
-import moon from "../assets/icon-moon.svg";
+import moon from "../../public/images/icon-moon.svg";
 
 function Header() {
   return (

@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg-main bg-(image:--bg-image-light) h-45">
+      <div className="header-bg min-h-45">
         <Main>
           <Header />
           <TodoForm onAddItems={handleAddItems} />

@@ -1,21 +1,21 @@
-function TodoItem({ item, onDeleteItems, onToggleItems }) {
+function TodoItem({ todo, onDeleteItems, onToggleItems }) {
   return (
     <li className="bg-bg-card flex items-center justify-between px-4 py-2.5 rounded">
       <div className="flex items-center gap-3">
         <button
-          className={`check-btn ${item.checked && "checked_btn"}`}
-          onClick={() => onToggleItems(item.id)}
+          className={`check-btn ${todo.checked && "checked_btn"}`}
+          onClick={() => onToggleItems(todo.id)}
         ></button>
 
         <span
           className={`text-text-primary text-[0.8rem] ${
-            item.checked ? "line-through" : ""
+            todo.checked ? "line-through" : ""
           }`}
         >
-          Jog around the park 3x {item.description}
+          Jog around the park 3x {todo.description}
         </span>
       </div>
-      <button onClick={() => onDeleteItems(item.id)}>
+      <button onClick={() => onDeleteItems(todo.id)}>
         <svg
           className="w-3.5 h-3.5"
           xmlns="http://www.w3.org/2000/svg"

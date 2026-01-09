@@ -1,18 +1,28 @@
-import Item from "./TodoItem";
+import TodoTextBox from "./TodoTextBox";
+import TodoSummary from "./TodoSummary";
 
-function TodoLists({ todos, onDeleteItems, onToggleItems }) {
+function TodoLists({
+  onDeleteItems,
+  onToggleItems,
+  filteredTodos,
+  todos,
+  filter,
+  setFilter,
+  handleClearList,
+}) {
   return (
     <div className="mt-4">
-      <ul>
-        {todos.map((item) => (
-          <Item
-            item={item}
-            key={item.id}
-            onDeleteItems={onDeleteItems}
-            onToggleItems={onToggleItems}
-          />
-        ))}
-      </ul>
+      <TodoTextBox
+        onDeleteItems={onDeleteItems}
+        onToggleItems={onToggleItems}
+        filteredTodos={filteredTodos}
+      />
+      <TodoSummary
+        todos={todos}
+        filter={filter}
+        setFilter={setFilter}
+        handleClearList={handleClearList}
+      />
     </div>
   );
 }

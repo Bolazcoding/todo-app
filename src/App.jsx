@@ -3,9 +3,11 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import TodoForm from "./components/TodoForm";
 import TodoLists from "./components/TodoLists";
+import TodoSummary from "./components/TodoSummary";
 
 function App() {
   const [todos, setTodo] = useState([]);
+  const [filter, setFilter] = useState("all");
 
   function handleAddItems(todo) {
     setTodo((todos) => [...todos, todo]);
@@ -23,11 +25,31 @@ function App() {
     );
   }
 
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "active") {
+      return !todo.checked;
+    }
+
+    if (filter === "completed") {
+      return todo.checked;
+    }
+
+    return true;
+  });
+
+  function handleClearList() {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete all items?"
+    );
+
+    if (confirmed) setTodo([]);
+  }
+
   // console.log(todos);
 
   return (
     <>
-      <div className="header-bg min-h-45">
+      <div className="header-bg h-48">
         <Main>
           <Header />
           <TodoForm onAddItems={handleAddItems} />
@@ -35,6 +57,10 @@ function App() {
             todos={todos}
             onDeleteItems={handleDeleteItems}
             onToggleItems={handleToggleItems}
+            filter={filter}
+            setFilter={setFilter}
+            filteredTodos={filteredTodos}
+            handleClearList={handleClearList}
           />
         </Main>
       </div>

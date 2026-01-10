@@ -59,7 +59,7 @@
 
 @layer components {
   .check-btn {
-    @apply w-[1.2rem] h-[1.2rem] border border-border rounded-full p-1;
+    @apply w-[1.4rem] h-[1.4rem] border border-border rounded-full p-1 cursor-pointer;
   }
   .checked_btn {
     @apply p-0.5 bg-[url('../public/images/icon-check.svg'),var(--color-primary-check-gradient)] bg-cover;

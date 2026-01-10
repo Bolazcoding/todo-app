@@ -24,7 +24,7 @@ function TodoForm({ onAddItems }) {
     >
       <button className="check-btn"></button>
       <input
-        className="  text-[0.8rem] text-text-primary font-bold placeholder:font-normal border-0 focus:outline-none w-full"
+        className="  text-[1rem] text-text-primary font-bold placeholder:font-normal border-0 focus:outline-none w-full"
         type="text"
         placeholder="Create a new todo..."
         value={description}

@@ -39,7 +39,7 @@ function App() {
 
   function handleClearList() {
     const confirmed = window.confirm(
-      "Are you sure you want to delete all items?"
+      "Are you sure you want to delete all the todo lists?"
     );
 
     if (confirmed) setTodo([]);
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <>
-      <div className="header-bg h-48">
+      <div className="header-bg h-50">
         <Main>
           <Header />
           <TodoForm onAddItems={handleAddItems} />

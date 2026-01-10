@@ -8,16 +8,16 @@ function TodoItem({ todo, onDeleteItems, onToggleItems }) {
         ></button>
 
         <span
-          className={`text-text-primary text-[0.8rem] ${
+          className={`text-text-primary text-[1rem] ${
             todo.checked ? "line-through" : ""
           }`}
         >
-          Jog around the park 3x {todo.description}
+          {todo.description}
         </span>
       </div>
       <button onClick={() => onDeleteItems(todo.id)}>
         <svg
-          className="w-3.5 h-3.5"
+          className="w-4.5 h-4.5"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 18 18"
         >

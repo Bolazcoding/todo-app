@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: "Josefin Sans", sans-serif;
   /* ========== LIGHT THEME ========== */
   --color-bg-main: hsl(0, 0%, 98%); /* Gray 50 */
   --color-bg-card: hsl(0, 0%, 98%); /* Gray 50 */
@@ -16,6 +16,11 @@
     hsl(192, 100%, 67%),
     hsl(280, 87%, 65%)
   );
+}
+
+body {
+  background-color: var(--color-bg-main);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 @theme {
@@ -35,11 +40,14 @@
 
   --color-border: hsl(233, 11%, 84%); /* Gray 300 */
   --color-divider: hsl(234, 39%, 85%); /* Purple 300 */
+  --color-hover: hsl(236, 33%, 92%); /* Purple 100 */
 
   --bg-image-light: url("../public/images/icon-check.svg");
+  --bg-desktop: url("../public/images/bg-desktop-light.jpg");
+  --bg-mobile: url("../public/images/bg-mobile-light.jpg");
 
   --img-check: "src/assets/icon-check.svg";
-  --img-cross: "../public/images/icon-check.svg";
+  --img-toggle-theme: "../public/images/icon-moon.svg";
 }
 
 /* ========== DARK THEME ========== */
@@ -55,6 +63,17 @@
 
   --color-hover: hsl(236, 33%, 92%); /* Purple 100 */
   --color-text-muted: hsl(235, 16%, 43%); /* Purple 600 */
+
+  --bg-desktop: url("../public/images/bg-desktop-dark.jpg");
+  --bg-mobile: url("../public/images/bg-mobile-dark.jpg");
+
+  --img-toggle-theme: "../public/images/icon-sun.svg";
+}
+
+@layer base {
+  .summarybtn {
+    @apply text-text-secondary text-[0.85rem] font-bold cursor-pointer hover:text-text-primary;
+  }
 }
 
 @layer components {
@@ -71,6 +90,6 @@
   } */
 
   .header-bg {
-    @apply bg-[url('../public/images/bg-desktop-light.jpg')] bg-cover;
+    /* @apply bg-[url('../public/images/bg-desktop-light.jpg')] bg-cover; */
   }
 }

@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import TodoForm from "./components/TodoForm";
 import TodoLists from "./components/TodoLists";
-import TodoSummary from "./components/TodoSummary";
 
 function App() {
   const [todos, setTodo] = useState([]);
@@ -49,7 +48,7 @@ function App() {
 
   return (
     <>
-      <div className="header-bg h-50">
+      <div className="bg-[image:var(--bg-desktop)] bg-bg-main bg-cover w-full h-55 max-[640px]:bg-[image:var(--bg-mobile)] max-[640px]:h-65">
         <Main>
           <Header />
           <TodoForm onAddItems={handleAddItems} />

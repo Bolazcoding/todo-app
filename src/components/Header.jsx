@@ -1,10 +1,24 @@
-import moon from "../../public/images/icon-moon.svg";
-
 function Header() {
   return (
     <header className="flex items-center justify-between">
-      <h1 className="text-bg-card text-3xl tracking-widest font-bold">TODO</h1>
-      <img src={moon} alt="moon-icon" className="w-5.5" />
+      <h1 className="text-[hsl(0,0%,98%)] text-4xl tracking-widest font-medium">
+        TODO
+      </h1>
+      <button
+        className="border-0 cursor-pointer"
+        onClick={() => document.documentElement.classList.toggle("dark")}
+      >
+        <img
+          src="/images/icon-moon.svg"
+          className="w-6.5 dark:hidden"
+          alt="theme-change"
+        />
+        <img
+          src="/images/icon-sun.svg"
+          className="w-6.5 hidden dark:block"
+          alt="theme-change"
+        />
+      </button>
     </header>
   );
 }

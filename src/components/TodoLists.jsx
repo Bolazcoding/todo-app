@@ -11,7 +11,7 @@ function TodoLists({
   handleClearList,
 }) {
   return (
-    <div className="mt-4">
+    <div className="mt-4 shadow-[0_0px_50px_-15px_rgba(0,0,0,0.3)] rounded-3xl">
       <TodoTextBox
         onDeleteItems={onDeleteItems}
         onToggleItems={onToggleItems}

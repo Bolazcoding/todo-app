@@ -12,14 +12,14 @@ function TodoForm({ onAddItems }) {
     // console.log(newItem);
 
     onAddItems(newItem);
-    console.log(newItem);
+    // console.log(newItem);
 
     setDescription("");
   }
 
   return (
     <form
-      className=" bg-bg-main px-4 py-2.5 mt-4 flex items-center gap-3 rounded"
+      className=" bg-bg-card px-4 py-3.5 mt-4 flex items-center gap-3 rounded max-[500px]:py-4"
       onSubmit={handleSubmit}
     >
       <button className="check-btn"></button>

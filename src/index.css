@@ -3,24 +3,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* ========== LIGHT THEME ========== */
-  --color-bg-main: hsl(0, 0%, 98%); /* Gray 50 */
-  --color-bg-card: hsl(0, 0%, 98%); /* Gray 50 */
-
-  --color-text-primary: hsl(235, 19%, 35%); /* Navy 850 */
-  --color-text-secondary: hsl(236, 9%, 61%); /* Gray 600 */
-
-  --color-border: hsl(233, 11%, 84%); /* Gray 300 */
-  --color-divider: hsl(234, 39%, 85%); /* Purple 300 */
-  --color-primary-check-gradient: linear-gradient(
-    hsl(192, 100%, 67%),
-    hsl(280, 87%, 65%)
-  );
+  font-family: "Josefin Sans", sans-serif;
 }
 
 body {
   background-color: var(--color-bg-main);
-  font-family: "Josefin Sans", sans-serif;
 }
 
 @theme {
@@ -46,7 +33,6 @@ body {
   --bg-desktop: url("../public/images/bg-desktop-light.jpg");
   --bg-mobile: url("../public/images/bg-mobile-light.jpg");
 
-  --img-check: "src/assets/icon-check.svg";
   --img-toggle-theme: "../public/images/icon-moon.svg";
 }
 
@@ -85,11 +71,6 @@ body {
   }
 
   /* .header-bg {
-    background-image: url(../public/images/bg-desktop-light.jpg);
-    background-size: cover;
+    @apply bg-[url('../public/images/bg-desktop-light.jpg')] bg-cover;
   } */
-
-  .header-bg {
-    /* @apply bg-[url('../public/images/bg-desktop-light.jpg')] bg-cover; */
-  }
 }

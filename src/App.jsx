@@ -3,9 +3,11 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import TodoForm from "./components/TodoForm";
 import TodoLists from "./components/TodoLists";
+import { useLocalStorageState } from "./hooks/useLocalStorageState";
 
 function App() {
-  const [todos, setTodo] = useState([]);
+  // const [todos, setTodo] = useState([]);
+  const [todos, setTodo] = useLocalStorageState([], "todos");
   const [filter, setFilter] = useState("all");
 
   function handleAddItems(todo) {

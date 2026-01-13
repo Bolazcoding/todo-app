@@ -1,16 +1,58 @@
-# React + Vite
+# Frontend Mentor - Todo app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Users should be able to:
 
-## Expanding the ESLint configuration
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Screenshot
+
+- Desktop Preview
+
+![](./public/images/Desktop%20preview.png)
+
+- Mobile Preview
+
+![](./public/images/Mobile%20preview.png)
+
+### Links
+
+- Solution URL: https://github.com/Bolazcoding/todo-app
+- Live Site URL: https://mobolaji-todo-app.vercel.app/
+
+### Built with
+
+- Semantic HTML5 markup
+- Tailwind CSS
+- React
+- Local Storage
+
+### Continued development
+
+This project tested my skills but I'm looking forward to more projects to build in the future.
+
+## Author
+
+- Website - [my github](https://github.com/Bolazcoding)
+- Frontend Mentor - [@myusername](https://www.frontendmentor.io/profile/Bolazcoding)
+- Twitter - [@myusername](https://x.com/_joseDev_)
